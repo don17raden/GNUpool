@@ -28,13 +28,13 @@ const Home: NextPage = () => {
       <div className="flex flex-wrap h-screen flex-row justify-between">
         <div className="flex flex-col w-6/12">
           <div className="flex flex-col justify-center px-20 gap-5">
-            <p className="font-black text-2xl py-4">GNOD</p>
+            <p className="font-black text-2xl py-4">GNUPool</p>
             <h1 className="text-7xl font-semibold text-[#6565d6] mt-16 leading-[90px]">
               <span className="font-black text-[#3661EB]">Stake</span> GNO{" "}
               as a Team
             </h1>
             <p className="text-2xl w-full text-[#888B94] font-normal">
-              Create or Join a team and stake together
+              Create or Join a Pack and stake together
             </p>
             <br/>
             <button
