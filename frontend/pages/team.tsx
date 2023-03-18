@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Theme, Button } from 'react-daisyui'
+import { Theme, Button } from 'react-daisyui';
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
   export default function dash() {
     const [showModal, setShowModal] = useState(false);
@@ -10,6 +11,9 @@ import { Theme, Button } from 'react-daisyui'
             <p className="font-black text-2xl pt-2">GNOD</p>
         </div> */}
 
+        <div className="hidden flex-1 lg:flex items-center justify-end mt-5 mr-5">
+            <ConnectButton />
+        </div>
         <center>
             <h1 className="text-7xl font-semibold   leading-[90px]">
                 <span className="font-black  text-[#e7ff6d]">GNUPool</span>

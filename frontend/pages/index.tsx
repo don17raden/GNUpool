@@ -1,27 +1,14 @@
 import type { NextPage } from "next";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 declare var window: any
 const Home: NextPage = () => {
   const router = useRouter();
-  const [walletAddress, setWalletAddress] = useState("");
 
-  async function requestAccount() {
-    //console.log("Inside Function requestAccount");
-
-    if (window.ethereum) {
-      //console.log("Detected Metamsk");
-        const accounts = await window.ethereum.request({
-          method: "eth_requestAccounts",
-        });
-        console.log(accounts);
-        setWalletAddress(accounts[0]);
-        router.push("/team");
-    } else {
-      alert("Please install metamask");
-    }
+  function goToTeam() {
+    router.push("/team");
   }
-
 
   return (
     <div className="pl-2 font-poppins  bg-black">
@@ -40,7 +27,7 @@ const Home: NextPage = () => {
             <br/>
             <button
               className="bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-700 w-full h-14 mt-4 text-black font-bold rounded-md"
-              onClick={requestAccount}
+              onClick={goToTeam}
             >
               Goto App
             </button>
